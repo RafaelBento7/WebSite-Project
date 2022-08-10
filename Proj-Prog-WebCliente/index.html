@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/main.css"> <!-- Ficheiro css-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jquery -->
+		<!-- BOOTSTRAP -->
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<title>Cripto-Moedas</title>
+	</head>
+	<body id="page" onload="pedidoAPI()">
+			<!--NAVBAR-->
+		<nav class="navbar navbar-default navbar-fixed-top">
+	 		<div class="container-fluid">
+	 			<div class="collapse navbar-collapse" id="myNavbar">
+	 				<a href="https://www.ipleiria.pt/estg/">
+	 					<img id="imglogo" src="imagens/estglogo.png">
+	 				</a>
+	 				<ul class="nav navbar-nav navbar-right">
+	 					<li><a href="#page">Top</a></li>
+	 					<li><a href="favoritos.html">Favoritos</a></li>
+	 				</ul>
+	 			</div>
+	 		</div>
+		</nav>
+		<br/><br/><br/>
+		<input type="text" id="myInput" onkeyup="barraPesquisa()" placeholder="Digite a cripto-moeda" title="Pesquisar">  <!-- BARRA DE PESQUISA-->
+		<button type="button" class="btn btn-primary" id="butaoTop" onclick="alterarTop()"></button> <!-- ALTERNA O TOP ENTRE 10 E 100 -->
+		<button type="button" class="btn btn-primary" id="butaoOrdem" onclick="alternarOrdem()">Ordenar por Volume</button> <!-- ALTERNA A ORDEM -->
+		<!--<button type="button" class="btn btn-primary" onclick="eur()">EUR</button>--><!-- BUTÃO EURO -->
+		<!--<button type="button" class="btn btn-primary" onclick="usd()">USD</button>--><!-- BUTÃO DOLAR -->
+		<button type="button" class="btn btn-primary" id="butaodaCoin" onclick="trocarMoeda()"></button>
+		
+		<!-- LISTA DE COINS-->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			  	<h3 class="panel-title">Lista de Cripto-Moedas</h3>
+			</div>
+			<div class="panel-body">		    	
+			    <div class="mediaGroup">
+					<ul class="media-list">
+						<li class="media">
+							<div class="media-left">
+								<p>
+									<span class="rank"></span>
+									<img class="img-thumbnail" id="image">
+							    </p>								     
+							</div>
+							<div class="media-body">
+							    <h4 class="title media-heading"></h4>
+							    <p>
+							    	<span class="patual"></span><br/>
+							    	<span class="marketcap"></span><br/>
+							    </p>
+							</div>
+							<div class="media-right">
+							    <a id="detail" href="detalhes.html">
+									<button type="button" class="btn btn-info">Detalhes</button>
+								</a>
+								<a id="addFav">
+									<button type="button" class="btn btn-info" id="botaofavorito">Adicionar aos favoritos</button>
+								</a>
+							</div>
+						</li>
+					</ul>
+				   </div>
+			</div>
+		</div>
+		<!-- RODAPE -->
+		<footer class="text-center">
+			<div class="setatopo">
+				<a class="up-arrow" href="#page" data-toggle="tooltip" title="Topo da página">
+					<span class="glyphicon glyphicon-chevron-up"></span>
+				</a>
+				<p>Voltar ao topo da página</p>
+			</div>
+			<h4>Made By:</h4>
+			<p>Rafael Bento<br/>Tomás Jerónimo<br/>Gabriel Sá</p>
+		</footer>
+		<script type="text/javascript" src="js/lista.js"></script><!-- Ficheiro js-->
+	</body>
+</html>

@@ -1,0 +1,80 @@
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 30px;
+}
+footer a { 
+    color: #f5f5f5;
+}
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+.setatopo {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2d2d30;
+    text-align: center;
+    height: 40px;
+}
+
+.media-left {
+    width: 1200px;
+    text-align: center;
+  
+}
+
+.rank{
+    font-size: 18pt;
+}
+
+#image {
+    width: 40%;
+    height: 40%;
+    margin-left: 5px;
+}
+
+#imglogo{
+  width: 200px;
+  height: 50px;
+}
+
+h1 {
+    margin-left: 20px;
+}
+
+h5 {
+    display: inline-block;
+}
+
+.panel-default {
+    margin: 20px;
+}
+
+#myInput {
+  background-image: url('../imagens/lupa.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-left: 20px;
+  width: 30%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.media{
+   display: list-item;    
+  } 
+
+.media-right{
+    text-align: center;
+}
+
+#botaofavorito{
+   margin-top : 5px;
+   background-color: FFFFFF;
+}
